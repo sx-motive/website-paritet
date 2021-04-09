@@ -28,7 +28,12 @@ import AutoInfo from "./call/AutoInfo";
 
 const AnimatedSwitch = withRouter(({ location }) => (
   <TransitionGroup>
-    <CSSTransition key={location.key} classNames="slide" timeout={1000}>
+    <CSSTransition
+      key={location.key}
+      classNames="slide page"
+      timeout={1000}
+      unmountOnExit
+    >
       <Switch location={location}>
         {/*  MAIN PAGES ROUTER   */}
         <Route exact path="/" component={Home} />

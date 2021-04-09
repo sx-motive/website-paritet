@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function ToggleMenu() {
-
-function toggleMenu() {
+  function toggleMenu() {
     document
-      .getElementsByClassName("menu-toggled-wrapper")[0].classList.toggle("menu-wrapper-show");
+      .getElementsByClassName("menu-toggle")[0]
+      .classList.toggle("active");
+    document
+      .getElementsByClassName("menu-toggled-wrapper")[0]
+      .classList.toggle("menu-wrapper-show");
   }
 
   return (
@@ -15,19 +18,27 @@ function toggleMenu() {
         <h4>Паритет Инфо</h4>
         <ul>
           <li>
-            <Link onClick={toggleMenu} to="/">Главная</Link>
+            <Link onClick={toggleMenu} to="/">
+              Главная
+            </Link>
           </li>
           <li>
-            <Link onClick={toggleMenu} to="../call/call-center">Колл-центр</Link>
+            <Link onClick={toggleMenu} to="../call/call-center">
+              Колл-центр
+            </Link>
           </li>
           <li>
-            <Link onClick={toggleMenu} to="../websites">Разработка сайтов</Link>
+            <Link onClick={toggleMenu} to="../websites">
+              Разработка сайтов
+            </Link>
           </li>
           <li>
             <a href="https://4geo.ru">Справочник 4гео</a>
           </li>
           <li>
-            <Link onClick={toggleMenu} to="/contacts">Контакты</Link>
+            <Link onClick={toggleMenu} to="/contacts">
+              Контакты
+            </Link>
           </li>
         </ul>
       </div>

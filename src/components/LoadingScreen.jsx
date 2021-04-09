@@ -1,16 +1,15 @@
-import React from 'react'
-import LogoW from '../assets/media/logo-w.svg';
+import React from "react";
 
 function LoadingScreen() {
-    return (
+  return (
     // slide between pages
     <div className="loading-container">
-        <div className="loading-screen">
-            <div className="loading-screen-box1"></div>
-            <div className="loading-screen-box2"></div>
-        </div>
+      <div className="loading-screen">
+        <div className="loading-screen-box1"></div>
+        <div className="loading-screen-box2"></div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default LoadingScreen;
